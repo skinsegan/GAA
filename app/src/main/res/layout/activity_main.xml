@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:screenOrientation="nosensor"
+    tools:context="com.example.android.gaa.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/resetButton"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/goalA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="56dp"
+            android:onClick="addGoalTeamA"
+            android:text="@string/goal"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/team_a"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="56dp"
+            android:onClick="addPointTeamA"
+            android:text="@string/point"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/TeamAScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/team_a_goal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/zero"
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/hyphen"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:id="@+id/team_a_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="4"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/zero"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/team_a_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TeamAScore"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="resetScores"
+        android:text="@string/reset"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/resetButton">
+
+        <Button
+            android:id="@+id/goalB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="16dp"
+            android:onClick="addGoalTeamB"
+            android:text="@string/goal"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="56dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="32dp"
+            android:onClick="addPointTeamB"
+            android:text="@string/point"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/TeamBScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/team_b_goal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/zero"
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/hyphen"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:id="@+id/team_b_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="4"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/zero"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/white"
+                android:textSize="64sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/team_b_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/TeamBScore"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/teamB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/team_b"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
